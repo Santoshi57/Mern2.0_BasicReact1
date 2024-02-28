@@ -15,7 +15,8 @@ import PropTypes from 'prop-tyoes'
 
 // eslint-disable-next-line react/prop-types
 const Button =({buttonContent, nextContent})=>{
-    return (
+    
+  return (
         <>
         <button>{buttonContent}</button>
         <button>{nextContent}</button>
