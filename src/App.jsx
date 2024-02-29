@@ -28,23 +28,34 @@
 
 import {useState } from 'react'
 
-function App () {
-  var resultReturnedFromUseState = useState(0)
-  var firstIndexValue = resultReturnedFromUseState[0]
-  var secondIndexFunction = resultReturnedFromUseState[1]
+// function App () {
+//   var resultReturnedFromUseState = useState(0)
+//   var firstIndexValue = resultReturnedFromUseState[0]
+//   var secondIndexFunction = resultReturnedFromUseState[1]
 
-  //Another method to use usestate
-//function App(){
-//const [count, setCount]= useState(0)
+// return (
+//   <>
+// <h1>{firstIndexValue}</h1>
+// <button onClick={()=> secondIndexFunction(firstIndexValue + 1)}>+</button>
+
+//   </>
+// )
+// }
+// export default App
 
 
-return (
+////*another method for use state
+
+function App(){
+  const [count, setCount] = useState(0)
+
+return(
   <>
-<h1>{firstIndexValue}</h1>
-<button onClick={()=> secondIndexFunction(firstIndexValue + 1)}>+</button>
+<h1>{count}</h1>
+<button onClick={()=>setCount(count +1)}>+</button>
+<button onClick={()=>setCount(count- 1)}>-</button>
 
   </>
 )
 }
 export default App
-
