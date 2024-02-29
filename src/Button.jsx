@@ -1,17 +1,5 @@
-import PropTypes from 'prop-tyoes'
+import PropTypes from 'prop-types'
 
-
-//const Button = (props)=>{
-  //  console.log(props) 
-    //return (
-      //  <>
-        
-        //<button>{this.props.buttonContent}</button>
-        //<button>{this.props.nextContent}</button>
-
-        //</>
-    //)
-//}
 
 // eslint-disable-next-line react/prop-types
 const Button =({buttonContent, nextContent})=>{
@@ -28,8 +16,8 @@ const Button =({buttonContent, nextContent})=>{
 // Button.defaultProps ={
 //     buttonContent : "yodefaultpropsbataako"
 // }
- Button.PropTypes ={
-    nextContent : PropTypes.string.isRequire 
+ Button.propTypes ={
+    nextContent : PropTypes.string.isRequired 
  }
 
 
