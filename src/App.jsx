@@ -91,7 +91,7 @@ const [nextCount, setNextCount]= useState(0)
 useEffect (()=>{
   console.log("Third useEffect was called")
 
-})
+ })
   return (
     <>
    <h1>{count}</h1>
