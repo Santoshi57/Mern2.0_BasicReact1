@@ -24,9 +24,10 @@
 
 // export default App
 
-//// *Use State used*
 
-import {useState } from 'react'
+//// *****Use State used*****
+
+//import {useState } from 'react'
 
 // function App () {
 //   var resultReturnedFromUseState = useState(0)
@@ -44,18 +45,77 @@ import {useState } from 'react'
 // export default App
 
 
-////*another method for use state
+////  ****another method for use state***
 
-function App(){
-  const [count, setCount] = useState(0)
+// function App(){
+//   const [count, setCount] = useState(0)
+//   const [name, setName] = useState("Santoshi")
 
-return(
-  <>
-<h1>{count}</h1>
-<button onClick={()=>setCount(count +1)}>+</button>
-<button onClick={()=>setCount(count- 1)}>-</button>
+// return(
+//   <>
+// <h1>{count}</h1>
+// <button onClick={()=>setCount(count +1)}>+</button>
+// <button onClick={()=>setCount(count- 1)}>-</button>
+// <h1>{name}</h1>
+// <button onClick={()=>setName("Santosh")}>Change Name</button>
 
-  </>
-)
+//   </>
+// )
+// }
+// export default App
+
+
+
+
+////**** Using UseEffect ****/
+
+import{useEffect, useState} from 'react'
+
+function App ()  {
+const [count, setCount ]=useState(0)
+const [nextCount, setNextCount]= useState(0)
+
+  //*****first type*****
+//   useEffect(()=>{
+//  console.log("useEffect was called")
+
+//   },[])
+
+
+//   //*****second type****
+//   useEffect(()=>{
+
+//   },[count])
+
+//*****third type****
+useEffect (()=>{
+  console.log("Third useEffect was called")
+
+})
+  return (
+    <>
+   <h1>{count}</h1>
+   <button onClick ={()=> setCount(count+1)}>+</button>
+   <h1>{nextCount}</h1>
+   <button onClick ={()=> setNextCount(nextCount+1)}>+</button>
+   </>
+  )
+
 }
+
 export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
